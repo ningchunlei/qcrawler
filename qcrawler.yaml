@@ -1,0 +1,3 @@
+spider:
+  ? {url: 'http://www.taobao.com',js: a.js}
+  : - !!org.qcrawler.rule.Rule {rule: '<ul class="tsearch-tab clearfix" id="J_TSearchTabs">((?!</ul>).)*</ul>',js: ''}

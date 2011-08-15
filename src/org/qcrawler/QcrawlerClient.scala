@@ -17,6 +17,8 @@ import org.xml.sax.InputSource
 import java.io.ByteArrayInputStream
 import javax.script.ScriptEngineManager
 import java.io.InputStreamReader
+import org.w3c.dom.Element
+import org.w3c.dom.Node
 
 class QcrawlerClient{
   
@@ -35,8 +37,10 @@ object QcrawlerClient {
 		    if(h.getRule!=""){
 		    	val p = Pattern.compile(h.getRule,Pattern.DOTALL); 
 		    	var m = p.matcher(html);
+		    	
 		        if(m.find){
 		    		ht += m.group;
+		    		println(ht);
 		        }
 		    }
 		}
@@ -71,15 +75,29 @@ object QcrawlerClient {
 	def exeDom(dom:String,js:String,context:javaMap,encoding:String){
 	    var d = new DOMParser();
 	    d.setProperty("http://cyberneko.org/html/properties/default-encoding",encoding);
+	    d.setFeature("http://cyberneko.org/html/features/balance-tags",false);
 	    d.parse(new InputSource(new ByteArrayInputStream(dom.getBytes(encoding))));
+	   
 	    var factory = new ScriptEngineManager();
 	    // create a JavaScript engine
 	    var engine = factory.getEngineByName("JavaScript");
 	    engine.put("document", d.getDocument);
+	    tr(d.getDocument().getDocumentElement,"\t");
+	    
 	    context.foreach((x) => engine.put(x._1,x._2));
 	    //println(classOf[QcrawlerClient].getResource("sizzle.js"));
 		engine.eval(new InputStreamReader(classOf[QcrawlerClient].getResourceAsStream("sizzle.js")));
 		engine.eval(js);
+	}
+	
+	def tr(v:Node,s:String){
+		println(s+v);  
+		var x = v.getChildNodes().getLength;
+		var c = 0;
+		while(x>c){
+		  tr(v.getChildNodes().item(c),s+"\t");
+		  c = c+1
+		}
 	}
 	
 	def main(args: Array[String]) {

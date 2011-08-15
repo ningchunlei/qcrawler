@@ -1,0 +1,10 @@
+<ul class="product-main">
+        <li class="p-tianxia p-first"><a href="http://tianxia.taobao.com/index.html?TBG=40953.121797.1&spm=1.40953.121797.1"><s></s><strong>淘宝天下</strong><span style="color:#8e5298;"></span></a></li>
+        <li class="p-caipiao"><a href="http://caipiao.taobao.com/?TBG=40953.121797.2&spm=1.40953.121797.2"><s></s><strong>彩票</strong><span style="color:#256ebe;">非赠勿扰</span></a></li>
+        <li class="p-jipiao"><a href="http://trip.taobao.com/?TBG=40953.121797.3&spm=1.40953.121797.3&ad_id=&am_id=&cm_id=14004451407185b41d01&pm_id="><s></s><strong>淘宝旅行</strong><span style="color:#40b31a;">出游排行</span></a></li>
+        <li class="p-mobile"><a href="http://www.taobao.com/m?TBG=40953.121797.4&spm=1.40953.121797.4"><s></s><strong>手机淘宝</strong><span style="color:#ff6600;">新版安卓</span></a></li>
+        <li class="p-try"><a href="http://try.taobao.com/index.htm?TBG=40953.121797.5&spm=1.40953.121797.5"><s></s><strong>试用中心</strong><span style="color:#a05de2;">10元享新品</span></a></li>
+        <li class="p-wangwang"><a href="http://wangwang.taobao.com/?TBG=40953.121797.6&spm=1.40953.121797.6"><s></s><strong>阿里旺旺</strong></a></li>
+        <li class="p-fenxiang"><a href="http://fx.taobao.com/view/share_look.htm?TBG=40953.121797.7&spm=1.40953.121797.7"><s></s><strong>宝贝分享</strong><span style="color:#cc0000;">5折疯抢</span></a></li>
+        <li class="p-quanqiugou"><a href="http://global.taobao.com/?TBG=40953.121797.8&spm=1.40953.121797.8&ad_id=&am_id=&cm_id=&pm_id="><s></s><strong>全球购</strong></a></li>
+    </ul>

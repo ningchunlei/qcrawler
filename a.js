@@ -1,1 +1,1 @@
-h.title=$.getText($("a"))
+h.title=$('li > a strong')
